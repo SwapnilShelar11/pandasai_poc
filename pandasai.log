@@ -1,0 +1,3156 @@
+2023-08-24 13:55:36 [INFO] Question: latitude of AM country
+2023-08-24 13:55:36 [INFO] Running PandasAI with openai LLM...
+2023-08-24 13:55:36 [INFO] Prompt ID: 4c294be6-7b63-4f20-b3b6-ed9f1278fe93
+2023-08-24 13:55:49 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    df = dfs[0]
+    latitude_am = df[df['country'] == 'AM']['latitude'].values[0]
+    return {"type": "text", "value": str(latitude_am)}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 13:55:49 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df = dfs[0]
+    latitude_am = df[df['country'] == 'AM']['latitude'].values[0]
+    return {'type': 'text', 'value': str(latitude_am)}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 13:55:49 [INFO] Answer: {'type': 'text', 'value': '40.069099'}
+2023-08-24 13:55:49 [INFO] Executed in: 12.947622776031494s
+2023-08-24 14:11:22 [INFO] Question: Calculate total Time on app spent by email mstephenson@fernandez.com
+2023-08-24 14:11:22 [INFO] Running PandasAI with openai LLM...
+2023-08-24 14:11:22 [INFO] Prompt ID: 06726d7c-d3b7-485f-b65b-6c5c9a7f6d2f
+2023-08-24 14:12:11 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    total_time_on_app = dfs[0][dfs[0]['Email'] == 'mstephenson@fernandez.com']['Time on App'].sum()
+    return {"type": "number", "value": total_time_on_app}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 14:12:11 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    total_time_on_app = dfs[0][dfs[0]['Email'] == 'mstephenson@fernandez.com']['Time on App'].sum()
+    return {'type': 'number', 'value': total_time_on_app}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 14:12:11 [INFO] Answer: {'type': 'number', 'value': 25.3113023}
+2023-08-24 14:12:11 [INFO] Executed in: 48.600301027297974s
+2023-08-24 14:13:50 [INFO] Question: Calculate total Time on app spent by email mstephenson@fernandez.com. give detail response in words
+2023-08-24 14:13:50 [INFO] Running PandasAI with openai LLM...
+2023-08-24 14:13:50 [INFO] Prompt ID: 63a02e56-cce5-4eaa-9958-0499049b0207
+2023-08-24 14:14:04 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    total_time_on_app = dfs[0][dfs[0]['Email'] == 'mstephenson@fernandez.com']['Time on App'].sum()
+    return {"type": "text", "value": f"The total time on app spent by email mstephenson@fernandez.com is {total_time_on_app}."}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 14:14:04 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    total_time_on_app = dfs[0][dfs[0]['Email'] == 'mstephenson@fernandez.com']['Time on App'].sum()
+    return {'type': 'text', 'value': f'The total time on app spent by email mstephenson@fernandez.com is {total_time_on_app}.'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 14:14:04 [INFO] Answer: {'type': 'text', 'value': 'The total time on app spent by email mstephenson@fernandez.com is 25.3113023.'}
+2023-08-24 14:14:04 [INFO] Executed in: 14.237627267837524s
+2023-08-24 14:23:23 [INFO] Question: None
+2023-08-24 14:23:23 [INFO] Running PandasAI with openai LLM...
+2023-08-24 14:23:23 [INFO] Prompt ID: 0b365dde-d375-4030-9335-9fd9e53f3c7d
+2023-08-24 14:23:40 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Prepare: No preprocessing or cleaning needed
+    
+    # Process: Calculate the average session length
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    
+    # Analyze: Return the average session length as text
+    result = {
+        "type": "text",
+        "value": f"The average session length is {avg_session_length:.2f} minutes."
+    }
+    
+    return result
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 14:23:40 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    result = {'type': 'text', 'value': f'The average session length is {avg_session_length:.2f} minutes.'}
+    return result
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 14:23:40 [INFO] Answer: {'type': 'text', 'value': 'The average session length is 34.55 minutes.'}
+2023-08-24 14:23:40 [INFO] Executed in: 16.399025917053223s
+2023-08-24 14:27:12 [INFO] Question: None
+2023-08-24 14:27:12 [INFO] Running PandasAI with openai LLM...
+2023-08-24 14:27:12 [INFO] Prompt ID: 12600639-63f9-4540-b6b3-f7f35812f8e4
+2023-08-24 14:27:12 [INFO] Using cached response
+2023-08-24 14:27:12 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Prepare: No preprocessing or cleaning needed
+    
+    # Process: Calculate the average session length
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    
+    # Analyze: Return the average session length as text
+    result = {
+        "type": "text",
+        "value": f"The average session length is {avg_session_length:.2f} minutes."
+    }
+    
+    return result
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 14:27:12 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    result = {'type': 'text', 'value': f'The average session length is {avg_session_length:.2f} minutes.'}
+    return result
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 14:27:12 [INFO] Answer: {'type': 'text', 'value': 'The average session length is 34.55 minutes.'}
+2023-08-24 14:27:12 [INFO] Executed in: 0.0034508705139160156s
+2023-08-24 14:27:19 [INFO] Question: None
+2023-08-24 14:27:19 [INFO] Running PandasAI with openai LLM...
+2023-08-24 14:27:19 [INFO] Prompt ID: 0ed166a7-8893-4094-a42c-97c0b44b1409
+2023-08-24 14:27:19 [INFO] Using cached response
+2023-08-24 14:27:19 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Prepare: No preprocessing or cleaning needed
+    
+    # Process: Calculate the average session length
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    
+    # Analyze: Return the average session length as text
+    result = {
+        "type": "text",
+        "value": f"The average session length is {avg_session_length:.2f} minutes."
+    }
+    
+    return result
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 14:27:19 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    result = {'type': 'text', 'value': f'The average session length is {avg_session_length:.2f} minutes.'}
+    return result
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 14:27:19 [INFO] Answer: {'type': 'text', 'value': 'The average session length is 34.55 minutes.'}
+2023-08-24 14:27:19 [INFO] Executed in: 0.0035839080810546875s
+2023-08-24 14:27:51 [INFO] Question: None
+2023-08-24 14:27:51 [INFO] Running PandasAI with openai LLM...
+2023-08-24 14:27:51 [INFO] Prompt ID: 91869413-cbba-4617-9f54-5389061f2208
+2023-08-24 14:27:51 [INFO] Using cached response
+2023-08-24 14:27:51 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Prepare: No preprocessing or cleaning needed
+    
+    # Process: Calculate the average session length
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    
+    # Analyze: Return the average session length as text
+    result = {
+        "type": "text",
+        "value": f"The average session length is {avg_session_length:.2f} minutes."
+    }
+    
+    return result
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 14:27:51 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    result = {'type': 'text', 'value': f'The average session length is {avg_session_length:.2f} minutes.'}
+    return result
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 14:27:51 [INFO] Answer: {'type': 'text', 'value': 'The average session length is 34.55 minutes.'}
+2023-08-24 14:27:51 [INFO] Executed in: 0.004918098449707031s
+2023-08-24 14:28:03 [INFO] Question: None
+2023-08-24 14:28:03 [INFO] Running PandasAI with openai LLM...
+2023-08-24 14:28:03 [INFO] Prompt ID: 16caf3c8-ffa5-437e-a090-fefd60184713
+2023-08-24 14:28:03 [INFO] Using cached response
+2023-08-24 14:28:03 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Prepare: No preprocessing or cleaning needed
+    
+    # Process: Calculate the average session length
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    
+    # Analyze: Return the average session length as text
+    result = {
+        "type": "text",
+        "value": f"The average session length is {avg_session_length:.2f} minutes."
+    }
+    
+    return result
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 14:28:03 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    result = {'type': 'text', 'value': f'The average session length is {avg_session_length:.2f} minutes.'}
+    return result
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 14:28:03 [INFO] Answer: {'type': 'text', 'value': 'The average session length is 34.55 minutes.'}
+2023-08-24 14:28:03 [INFO] Executed in: 0.003493785858154297s
+2023-08-24 14:29:00 [INFO] Question: None
+2023-08-24 14:29:00 [INFO] Running PandasAI with openai LLM...
+2023-08-24 14:29:00 [INFO] Prompt ID: d88c981c-a386-4e49-a683-aed8a5b319f4
+2023-08-24 14:29:00 [INFO] Using cached response
+2023-08-24 14:29:00 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Prepare: No preprocessing or cleaning needed
+    
+    # Process: Calculate the average session length
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    
+    # Analyze: Return the average session length as text
+    result = {
+        "type": "text",
+        "value": f"The average session length is {avg_session_length:.2f} minutes."
+    }
+    
+    return result
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 14:29:00 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    result = {'type': 'text', 'value': f'The average session length is {avg_session_length:.2f} minutes.'}
+    return result
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 14:29:00 [INFO] Answer: {'type': 'text', 'value': 'The average session length is 34.55 minutes.'}
+2023-08-24 14:29:00 [INFO] Executed in: 0.0039942264556884766s
+2023-08-24 14:29:15 [INFO] Question: Plot a bar graph between Time on App & Time on Website
+2023-08-24 14:29:15 [INFO] Running PandasAI with openai LLM...
+2023-08-24 14:29:15 [INFO] Prompt ID: 477ea1de-2b35-44ad-a273-f9339950a357
+2023-08-24 14:30:27 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    df = dfs[0]
+    # Plotting a bar graph between Time on App & Time on Website
+    df.plot.bar(x='Time on App', y='Time on Website')
+    plt.xlabel('Time on App')
+    plt.ylabel('Time on Website')
+    plt.title('Comparison between Time on App and Time on Website')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    
+    return {"type": "plot", "value": "exports/charts/temp_chart.png"}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 14:30:27 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df = dfs[0]
+    df.plot.bar(x='Time on App', y='Time on Website')
+    plt.xlabel('Time on App')
+    plt.ylabel('Time on Website')
+    plt.title('Comparison between Time on App and Time on Website')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 14:30:34 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 14:30:34 [INFO] Executed in: 78.38313388824463s
+2023-08-24 16:05:24 [INFO] Question: None
+2023-08-24 16:05:24 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:05:24 [INFO] Prompt ID: 73737a2e-0719-495e-8a92-3bd62e0033ee
+2023-08-24 16:05:24 [INFO] Using cached response
+2023-08-24 16:05:24 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Prepare: No preprocessing or cleaning needed
+    
+    # Process: Calculate the average session length
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    
+    # Analyze: Return the average session length as text
+    result = {
+        "type": "text",
+        "value": f"The average session length is {avg_session_length:.2f} minutes."
+    }
+    
+    return result
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:05:24 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    avg_session_length = dfs[0]['Avg. Session Length'].mean()
+    result = {'type': 'text', 'value': f'The average session length is {avg_session_length:.2f} minutes.'}
+    return result
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:05:24 [INFO] Answer: {'type': 'text', 'value': 'The average session length is 34.55 minutes.'}
+2023-08-24 16:05:24 [INFO] Executed in: 0.012471199035644531s
+2023-08-24 16:05:58 [INFO] Question: Generate number of customers who purchase product with price between 300 to 400
+2023-08-24 16:05:58 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:05:58 [INFO] Prompt ID: 810116ae-5039-4abf-a6d4-77097d179144
+2023-08-24 16:15:58 [INFO] Question: Generate number of customers who purchase product with price between 300 to 400
+2023-08-24 16:15:58 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:15:58 [INFO] Prompt ID: 05ca7950-b2ec-43bf-8954-ddccce7bc69c
+2023-08-24 16:16:45 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Filter the product purchase dataframe based on price range
+    filtered_df = dfs[1][(dfs[1]['price($)'] >= 300) & (dfs[1]['price($)'] <= 400)]
+    
+    # Count the number of customers who purchased products within the price range
+    num_customers = len(filtered_df)
+    
+    # Return the result as a dictionary
+    return {"type": "number", "value": num_customers}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:16:45 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    filtered_df = dfs[1][(dfs[1]['price($)'] >= 300) & (dfs[1]['price($)'] <= 400)]
+    num_customers = len(filtered_df)
+    return {'type': 'number', 'value': num_customers}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:16:45 [INFO] Answer: {'type': 'number', 'value': 144}
+2023-08-24 16:16:45 [INFO] Executed in: 46.70458388328552s
+2023-08-24 16:16:45 [INFO] Question: Generate total time spent on app by customer whos email is mstephenson@fernandez.com
+2023-08-24 16:16:45 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:16:45 [INFO] Prompt ID: bcbf7b8a-f054-4a85-815b-aa2ccf5c3be3
+2023-08-24 16:16:59 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Filter the dataframe based on the email
+    filtered_df = dfs[0][dfs[0]['Email'] == 'mstephenson@fernandez.com']
+    
+    # Calculate the total time spent on app
+    total_time_on_app = filtered_df['Time on App'].sum()
+    
+    # Return the result
+    return {"type": "number", "value": total_time_on_app}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:16:59 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    filtered_df = dfs[0][dfs[0]['Email'] == 'mstephenson@fernandez.com']
+    total_time_on_app = filtered_df['Time on App'].sum()
+    return {'type': 'number', 'value': total_time_on_app}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:16:59 [INFO] Answer: {'type': 'number', 'value': 25.3113023}
+2023-08-24 16:16:59 [INFO] Executed in: 14.149395942687988s
+2023-08-24 16:17:54 [INFO] Question: Generate total time spent on app by customer whos email is mstephenson@fernandez.com. give detail response in words
+2023-08-24 16:17:54 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:17:54 [INFO] Prompt ID: 37c80677-8d01-40de-a5f8-64f59a2201f4
+2023-08-24 16:18:40 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Filter the dataframe based on the email
+    filtered_df = dfs[0][dfs[0]['Email'] == 'mstephenson@fernandez.com']
+    
+    # Calculate the total time spent on app
+    total_time_on_app = filtered_df['Time on App'].sum()
+    
+    # Prepare the response
+    response = f"The total time spent on app by customer with email mstephenson@fernandez.com is {total_time_on_app} hours."
+    
+    # Return the response
+    return {"type": "text", "value": response}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:18:40 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    filtered_df = dfs[0][dfs[0]['Email'] == 'mstephenson@fernandez.com']
+    total_time_on_app = filtered_df['Time on App'].sum()
+    response = f'The total time spent on app by customer with email mstephenson@fernandez.com is {total_time_on_app} hours.'
+    return {'type': 'text', 'value': response}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:18:40 [INFO] Answer: {'type': 'text', 'value': 'The total time spent on app by customer with email mstephenson@fernandez.com is 25.3113023 hours.'}
+2023-08-24 16:18:40 [INFO] Executed in: 45.72850799560547s
+2023-08-24 16:18:58 [INFO] Question: Generate number of customers who purchase product with price between 100 to 200, 200 to 300, and so on till 900. generate response in tabular format
+2023-08-24 16:18:58 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:18:58 [INFO] Prompt ID: 80757223-10d1-44bb-9a6e-c0dd1c9082a4
+2023-08-24 16:19:17 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Extract the necessary columns from dfs[1]
+    df_products = dfs[1][['id', 'price($)']]
+    
+    # Create a new column to categorize the price range
+    df_products['price_range'] = pd.cut(df_products['price($)'], bins=range(100, 1000, 100), right=False)
+    
+    # Group by price range and count the number of customers
+    df_result = df_products.groupby('price_range').size().reset_index(name='count')
+    
+    # Rename the price range column for better readability
+    df_result.rename(columns={'price_range': 'Price Range'}, inplace=True)
+    
+    # Return the result as a dataframe
+    return {"type": "dataframe", "value": df_result}
+
+
+# Declare a result variable
+result = analyze_data(dfs)
+result
+                    ```
+                
+2023-08-24 16:19:17 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df_products = dfs[1][['id', 'price($)']]
+    df_products['price_range'] = pd.cut(df_products['price($)'], bins=range(100, 1000, 100), right=False)
+    df_result = df_products.groupby('price_range').size().reset_index(name='count')
+    df_result.rename(columns={'price_range': 'Price Range'}, inplace=True)
+    return {'type': 'dataframe', 'value': df_result}
+
+
+result = analyze_data(dfs)
+result
+        ```
+2023-08-24 16:19:17 [INFO] Answer: {'type': 'dataframe', 'value':   Price Range  count
+0  [100, 200)      0
+1  [200, 300)    130
+2  [300, 400)    143
+3  [400, 500)    181
+4  [500, 600)    135
+5  [600, 700)    148
+6  [700, 800)    148
+7  [800, 900)    149}
+2023-08-24 16:19:17 [INFO] Executed in: 18.389221906661987s
+2023-08-24 16:20:36 [INFO] Question: Generate number of customers who purchase product with price between 100 to 200, 200 to 300, and so on till 900. generate response in tabular format
+2023-08-24 16:20:36 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:20:36 [INFO] Prompt ID: 5d4b70f8-d006-4d78-af2f-a714d0ba2a09
+2023-08-24 16:20:58 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column "Product Purchase ID"
+    merged_df = dfs[0].merge(dfs[1], left_on="Product Purchase ID", right_on="id")
+
+    # Create a new column "price_range" based on the price of the product
+    merged_df["price_range"] = pd.cut(merged_df["price($)"], bins=range(100, 1000, 100))
+
+    # Group the data by "price_range" and count the number of customers in each range
+    customer_count = merged_df.groupby("price_range")["Email"].count().reset_index()
+
+    # Rename the columns
+    customer_count.columns = ["Price Range", "Number of Customers"]
+
+    # Convert the dataframe to tabular format
+    tabular_data = customer_count.to_string(index=False)
+
+    # Return the tabular data as the result
+    return {"type": "text", "value": tabular_data}
+
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:20:58 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    merged_df['price_range'] = pd.cut(merged_df['price($)'], bins=range(100, 1000, 100))
+    customer_count = merged_df.groupby('price_range')['Email'].count().reset_index()
+    customer_count.columns = ['Price Range', 'Number of Customers']
+    return {'type': 'text', 'value': tabular_data}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:20:58 [WARNING] Error of executing code
+2023-08-24 16:20:58 [WARNING] Failed to execute code with a correction framework [retry number: 1]
+2023-08-24 16:20:58 [INFO] Failed with error: name 'tabular_data' is not defined. Retrying
+2023-08-24 16:21:17 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    merged_df['price_range'] = pd.cut(merged_df['price($)'], bins=range(100, 1000, 100))
+    customer_count = merged_df.groupby('price_range')['Email'].count().reset_index()
+    customer_count.columns = ['Price Range', 'Number of Customers']
+    return {'type': 'text', 'value': tabular_data}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:21:17 [WARNING] Error of executing code
+2023-08-24 16:21:17 [WARNING] Failed to execute code with a correction framework [retry number: 2]
+2023-08-24 16:21:17 [INFO] Failed with error: name 'tabular_data' is not defined. Retrying
+2023-08-24 16:21:38 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    merged_df['price_range'] = pd.cut(merged_df['price($)'], bins=range(100, 1000, 100))
+    customer_count = merged_df.groupby('price_range')['Email'].count().reset_index()
+    customer_count.columns = ['Price Range', 'Number of Customers']
+    return {'type': 'text', 'value': tabular_data}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:21:38 [WARNING] Error of executing code
+2023-08-24 16:22:10 [INFO] Question: Generate number of customers who purchase product with price between 100 to 200, 200 to 300, and so on till 900. generate response in dataframe
+2023-08-24 16:22:10 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:22:10 [INFO] Prompt ID: ca3274f2-14f9-46fb-bd36-fbd75622a407
+2023-08-24 16:22:34 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes into one
+    df_combined = pd.concat(dfs, ignore_index=True)
+    
+    # Convert the price column to numeric
+    df_combined['price($)'] = pd.to_numeric(df_combined['price($)'], errors='coerce')
+    
+    # Create a list of price ranges
+    price_ranges = [(100 * i, 100 * (i + 1)) for i in range(1, 10)]
+    
+    # Create an empty dataframe to store the results
+    result_df = pd.DataFrame(columns=['Price Range', 'Number of Customers'])
+    
+    # Iterate over the price ranges
+    for price_range in price_ranges:
+        # Filter the dataframe based on the price range
+        filtered_df = df_combined[(df_combined['price($)'] >= price_range[0]) & (df_combined['price($)'] < price_range[1])]
+        
+        # Get the number of customers in the filtered dataframe
+        num_customers = len(filtered_df)
+        
+        # Create a new row for the result dataframe
+        result_row = {'Price Range': f'{price_range[0]} - {price_range[1]}', 'Number of Customers': num_customers}
+        
+        # Append the result row to the result dataframe
+        result_df = result_df.append(result_row, ignore_index=True)
+    
+    # Return the result dataframe
+    return {'type': 'dataframe', 'value': result_df}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:22:34 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df_combined = pd.concat(dfs, ignore_index=True)
+    df_combined['price($)'] = pd.to_numeric(df_combined['price($)'], errors='coerce')
+    price_ranges = [(100 * i, 100 * (i + 1)) for i in range(1, 10)]
+    result_df = pd.DataFrame(columns=['Price Range', 'Number of Customers'])
+    for price_range in price_ranges:
+        filtered_df = df_combined[(df_combined['price($)'] >= price_range[0]) & (df_combined['price($)'] < price_range[1])]
+        num_customers = len(filtered_df)
+        result_row = {'Price Range': f'{price_range[0]} - {price_range[1]}', 'Number of Customers': num_customers}
+        result_df = result_df.append(result_row, ignore_index=True)
+    return {'type': 'dataframe', 'value': result_df}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:22:34 [INFO] Answer: {'type': 'dataframe', 'value':   Price Range Number of Customers
+0   100 - 200                   0
+1   200 - 300                 130
+2   300 - 400                 143
+3   400 - 500                 181
+4   500 - 600                 135
+5   600 - 700                 148
+6   700 - 800                 148
+7   800 - 900                 149
+8  900 - 1000                  47}
+2023-08-24 16:22:34 [INFO] Executed in: 24.658188104629517s
+2023-08-24 16:24:37 [INFO] Question: 
+Generate number of customers who purchase product with price between 100 to 200, 200 to 300, and so on till 900. 
+generate response in dataframe
+
+2023-08-24 16:24:37 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:24:37 [INFO] Prompt ID: 4a38f2e4-7f7b-4bc6-937a-5059a71d16f2
+2023-08-24 16:25:02 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes into one
+    df_combined = pd.concat(dfs, ignore_index=True)
+    
+    # Convert the price column to numeric
+    df_combined['price($)'] = pd.to_numeric(df_combined['price($)'], errors='coerce')
+    
+    # Create a list of price ranges
+    price_ranges = [(100 * i, 100 * (i + 1)) for i in range(1, 10)]
+    
+    # Create an empty dataframe to store the results
+    result_df = pd.DataFrame(columns=['Price Range', 'Number of Customers'])
+    
+    # Iterate over the price ranges
+    for price_range in price_ranges:
+        # Filter the dataframe based on the price range
+        filtered_df = df_combined[(df_combined['price($)'] >= price_range[0]) & (df_combined['price($)'] < price_range[1])]
+        
+        # Get the number of customers in the filtered dataframe
+        num_customers = len(filtered_df)
+        
+        # Create a new row for the result dataframe
+        result_row = {'Price Range': f'{price_range[0]} - {price_range[1]}', 'Number of Customers': num_customers}
+        
+        # Append the result row to the result dataframe
+        result_df = result_df.append(result_row, ignore_index=True)
+    
+    # Return the result dataframe
+    return {'type': 'dataframe', 'value': result_df}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:25:02 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df_combined = pd.concat(dfs, ignore_index=True)
+    df_combined['price($)'] = pd.to_numeric(df_combined['price($)'], errors='coerce')
+    price_ranges = [(100 * i, 100 * (i + 1)) for i in range(1, 10)]
+    result_df = pd.DataFrame(columns=['Price Range', 'Number of Customers'])
+    for price_range in price_ranges:
+        filtered_df = df_combined[(df_combined['price($)'] >= price_range[0]) & (df_combined['price($)'] < price_range[1])]
+        num_customers = len(filtered_df)
+        result_row = {'Price Range': f'{price_range[0]} - {price_range[1]}', 'Number of Customers': num_customers}
+        result_df = result_df.append(result_row, ignore_index=True)
+    return {'type': 'dataframe', 'value': result_df}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:25:02 [INFO] Answer: {'type': 'dataframe', 'value':   Price Range Number of Customers
+0   100 - 200                   0
+1   200 - 300                 130
+2   300 - 400                 143
+3   400 - 500                 181
+4   500 - 600                 135
+5   600 - 700                 148
+6   700 - 800                 148
+7   800 - 900                 149
+8  900 - 1000                  47}
+2023-08-24 16:25:02 [INFO] Executed in: 24.82286787033081s
+2023-08-24 16:27:34 [INFO] Question: 
+Generate name of highest selled 5 products. In answer give name of product, total customers purchased it & total revenue generated from it
+generate response in dataframe
+
+2023-08-24 16:27:34 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:27:34 [INFO] Prompt ID: fe1d1e41-42ff-47cd-88da-d0570f1a834b
+2023-08-24 16:27:56 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column "Product Purchase ID"
+    merged_df = dfs[0].merge(dfs[1], left_on="Product Purchase ID", right_on="id")
+    
+    # Group by product name and calculate the total customers and total revenue for each product
+    grouped_df = merged_df.groupby("name").agg({"Email": "nunique", "price($)": "sum"}).reset_index()
+    
+    # Sort the dataframe by total revenue in descending order
+    sorted_df = grouped_df.sort_values("price($)", ascending=False)
+    
+    # Select the top 5 products
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.rename(columns={"Email": "Total Customers Purchased", "price($)": "Total Revenue Generated"}, inplace=True)
+    
+    # Reset the index
+    top_5_products.reset_index(drop=True, inplace=True)
+    
+    # Return the result as a dataframe
+    return {"type": "dataframe", "value": top_5_products}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:27:56 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby('name').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'Total Customers Purchased', 'price($)': 'Total Revenue Generated'}, inplace=True)
+    top_5_products.reset_index(drop=True, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:27:56 [INFO] Answer: {'type': 'dataframe', 'value':                                                 name  \
+0  Toshiba Rechargeable 5-Hour Battery Pack - MED...   
+1              Sony Stereo Audio Receiver - STRDE197   
+2                Kenwood 6-Disc CD Changer - KDCC669   
+3  Garmin Deluxe Carrying Case - Black Finish - 0...   
+4               Omnimount TV Top Shelf Mount - CCH1B   
+
+   Total Customers Purchased  Total Revenue Generated  
+0                          4                     3696  
+1                          4                     3472  
+2                          4                     3148  
+3                          4                     3136  
+4                          4                     2776  }
+2023-08-24 16:27:56 [INFO] Executed in: 21.811118125915527s
+2023-08-24 16:28:20 [INFO] Question: 
+Generate name of highest selled 5 products. In answer give id of product, total customers purchased it & total revenue generated from it
+generate response in dataframe
+
+2023-08-24 16:28:20 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:28:20 [INFO] Prompt ID: d496ec99-c81d-49d0-87e0-6ce21eb7891a
+2023-08-24 16:28:40 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column 'Product Purchase ID'
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    
+    # Group by product id and calculate the total customers and total revenue for each product
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    
+    # Sort the dataframe by total customers in descending order
+    sorted_df = grouped_df.sort_values('Email', ascending=False)
+    
+    # Select the top 5 products
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.rename(columns={'Email': 'Total Customers', 'price($)': 'Total Revenue'}, inplace=True)
+    
+    # Return the result as a dataframe
+    return {'type': 'dataframe', 'value': top_5_products}
+
+# Declare a result variable
+result = analyze_data(dfs)
+result
+                    ```
+                
+2023-08-24 16:28:40 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('Email', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'Total Customers', 'price($)': 'Total Revenue'}, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+result
+        ```
+2023-08-24 16:28:40 [INFO] Answer: {'type': 'dataframe', 'value':        id                                               name  Total Customers  \
+31  13945           Onkyo 6 Disc CD Player Changer - DXC390B                4   
+32  13954                 Panasonic Corded Phone - KXTS3282B                4   
+30  13701  Sanus Euro Foundations Satellite Speaker Stand...                4   
+34  14033  Garmin Deluxe Carrying Case - Black Finish - 0...                4   
+35  14061                Kenwood 6-Disc CD Changer - KDCC669                4   
+
+    Total Revenue  
+31           2464  
+32           2092  
+30           1948  
+34           3136  
+35           3148  }
+2023-08-24 16:28:40 [INFO] Executed in: 20.14338207244873s
+2023-08-24 16:29:01 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id of product, total customers purchased it & total revenue generated from it
+generate response in dataframe
+
+2023-08-24 16:29:01 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:29:01 [INFO] Prompt ID: 62bfe275-6e7e-4fe4-97ca-61e5be947703
+2023-08-24 16:29:23 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Merge the two dataframes on the common column 'Product Purchase ID'
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    
+    # Group by product id and calculate the total customers purchased and total revenue generated
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'count', 'price($)': 'sum'}).reset_index()
+    
+    # Sort the dataframe by total customers purchased in descending order
+    sorted_df = grouped_df.sort_values('Email', ascending=False)
+    
+    # Select the top 5 products
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.rename(columns={'Email': 'Total Customers Purchased', 'price($)': 'Total Revenue Generated'}, inplace=True)
+    
+    # Select the required columns
+    result_df = top_5_products[['id', 'Total Customers Purchased', 'Total Revenue Generated']]
+    
+    # Return the result as a dataframe
+    return {"type": "dataframe", "value": result_df}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:29:23 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'count', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('Email', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'Total Customers Purchased', 'price($)': 'Total Revenue Generated'}, inplace=True)
+    result_df = top_5_products[['id', 'Total Customers Purchased', 'Total Revenue Generated']]
+    return {'type': 'dataframe', 'value': result_df}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:29:23 [INFO] Answer: {'type': 'dataframe', 'value':        id  Total Customers Purchased  Total Revenue Generated
+31  13945                          4                     2464
+32  13954                          4                     2092
+30  13701                          4                     1948
+34  14033                          4                     3136
+35  14061                          4                     3148}
+2023-08-24 16:29:23 [INFO] Executed in: 21.58258295059204s
+2023-08-24 16:33:30 [INFO] Question: 
+Let me know, app or website on which most time spent by customers. 
+create horizontal bar graph for it.
+
+2023-08-24 16:33:30 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:33:30 [INFO] Prompt ID: 910b1d7a-3912-4b66-b7be-0a79074822c2
+2023-08-24 16:34:01 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on a common column
+    merged_df = pd.merge(dfs[0], dfs[1], left_on='Product Purchase ID', right_on='id', how='inner')
+    
+    # Calculate the total time spent on app and website
+    total_time_app = merged_df['Time on App'].sum()
+    total_time_website = merged_df['Time on Website'].sum()
+    
+    # Determine which platform has the most time spent
+    if total_time_app > total_time_website:
+        result_text = "Customers spent more time on the app than on the website."
+    elif total_time_app < total_time_website:
+        result_text = "Customers spent more time on the website than on the app."
+    else:
+        result_text = "Customers spent equal time on the app and website."
+    
+    # Create a horizontal bar graph
+    platform_labels = ['App', 'Website']
+    time_spent = [total_time_app, total_time_website]
+    
+    plt.barh(platform_labels, time_spent)
+    plt.xlabel('Time Spent (minutes)')
+    plt.ylabel('Platform')
+    plt.title('Time Spent by Customers on App vs Website')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    
+    # Return the result as a dictionary
+    result = {
+        "type": "text",
+        "value": result_text
+    }
+    
+    return result
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:34:01 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = pd.merge(dfs[0], dfs[1], left_on='Product Purchase ID', right_on='id', how='inner')
+    total_time_app = merged_df['Time on App'].sum()
+    total_time_website = merged_df['Time on Website'].sum()
+    if total_time_app > total_time_website:
+        result_text = 'Customers spent more time on the app than on the website.'
+    elif total_time_app < total_time_website:
+        result_text = 'Customers spent more time on the website than on the app.'
+    else:
+        result_text = 'Customers spent equal time on the app and website.'
+    platform_labels = ['App', 'Website']
+    time_spent = [total_time_app, total_time_website]
+    plt.barh(platform_labels, time_spent)
+    plt.xlabel('Time Spent (minutes)')
+    plt.ylabel('Platform')
+    plt.title('Time Spent by Customers on App vs Website')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    result = {'type': 'text', 'value': result_text}
+    return result
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:34:02 [INFO] Answer: {'type': 'text', 'value': 'Customers spent more time on the website than on the app.'}
+2023-08-24 16:34:02 [INFO] Executed in: 31.30880093574524s
+2023-08-24 16:35:01 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id of product, total customers purchased it & total revenue generated from it
+generate response in dataframe.
+also show me how you calculated response
+
+2023-08-24 16:35:01 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:35:01 [INFO] Prompt ID: 85d0fd8a-993c-43ee-8182-7cf7070887b8
+2023-08-24 16:35:40 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Extract the required columns from dfs[1]
+    df_products = dfs[1][['id', 'price($)']]
+    
+    # Group by product id and calculate the total customers purchased and total revenue generated
+    df_grouped = dfs[0].groupby('Product Purchase ID').agg({'Email': 'count', 'Price': 'sum'}).reset_index()
+    
+    # Merge the two dataframes on product id
+    df_merged = pd.merge(df_grouped, df_products, left_on='Product Purchase ID', right_on='id')
+    
+    # Sort the dataframe by total customers purchased in descending order
+    df_sorted = df_merged.sort_values('Email', ascending=False)
+    
+    # Select the top 5 products
+    df_top_5 = df_sorted.head(5)
+    
+    # Rename the columns
+    df_top_5.rename(columns={'Product Purchase ID': 'id', 'Email': 'Total Customers Purchased', 'Price': 'Total Revenue Generated'}, inplace=True)
+    
+    # Select the required columns
+    df_result = df_top_5[['id', 'Total Customers Purchased', 'Total Revenue Generated']]
+    
+    # Calculate the response
+    response = f"The highest selling 5 products are:\n\n{df_result.to_string(index=False)}\n\n"
+    response += "To calculate the response, the following steps were performed:\n"
+    response += "- Extracted the 'id' and 'price($)' columns from dfs[1]\n"
+    response += "- Grouped the data in dfs[0] by 'Product Purchase ID' and calculated the total customers purchased and total revenue generated\n"
+    response += "- Merged the two dataframes on 'Product Purchase ID'\n"
+    response += "- Sorted the merged dataframe by total customers purchased in descending order\n"
+    response += "- Selected the top 5 products\n"
+    response += "- Renamed the columns\n"
+    response += "- Selected the required columns\n"
+    
+    return {"type": "dataframe", "value": df_result, "response": response}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:35:40 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df_products = dfs[1][['id', 'price($)']]
+    df_grouped = dfs[0].groupby('Product Purchase ID').agg({'Email': 'count', 'Price': 'sum'}).reset_index()
+    df_merged = pd.merge(df_grouped, df_products, left_on='Product Purchase ID', right_on='id')
+    df_sorted = df_merged.sort_values('Email', ascending=False)
+    df_top_5 = df_sorted.head(5)
+    df_top_5.rename(columns={'Product Purchase ID': 'id', 'Email': 'Total Customers Purchased', 'Price': 'Total Revenue Generated'}, inplace=True)
+    df_result = df_top_5[['id', 'Total Customers Purchased', 'Total Revenue Generated']]
+    response += 'To calculate the response, the following steps were performed:\n'
+    response += "- Extracted the 'id' and 'price($)' columns from dfs[1]\n"
+    response += """- Grouped the data in dfs[0] by 'Product Purchase ID' and calculated the total customers purchased and total revenue generated
+"""
+    response += "- Merged the two dataframes on 'Product Purchase ID'\n"
+    response += '- Sorted the merged dataframe by total customers purchased in descending order\n'
+    response += '- Selected the top 5 products\n'
+    response += '- Renamed the columns\n'
+    response += '- Selected the required columns\n'
+    return {'type': 'dataframe', 'value': df_result, 'response': response}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:35:40 [WARNING] Error of executing code
+2023-08-24 16:35:40 [WARNING] Failed to execute code with a correction framework [retry number: 1]
+2023-08-24 16:35:40 [INFO] Failed with error: "Column(s) ['Price'] do not exist". Retrying
+2023-08-24 16:36:13 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df_products = dfs[1][['id', 'price($)']]
+    df_grouped = dfs[0].groupby('Product Purchase ID').agg({'Email': 'count', 'Price($)': 'sum'}).reset_index()
+    df_merged = pd.merge(df_grouped, df_products, left_on='Product Purchase ID', right_on='id')
+    df_sorted = df_merged.sort_values('Email', ascending=False)
+    df_top_5 = df_sorted.head(5)
+    df_top_5.rename(columns={'Product Purchase ID': 'id', 'Email': 'Total Customers Purchased', 'Price($)': 'Total Revenue Generated'}, inplace=True)
+    df_result = df_top_5[['id', 'Total Customers Purchased', 'Total Revenue Generated']]
+    response += 'To calculate the response, the following steps were performed:\n'
+    response += "- Extracted the 'id' and 'price($)' columns from dfs[1]\n"
+    response += """- Grouped the data in dfs[0] by 'Product Purchase ID' and calculated the total customers purchased and total revenue generated
+"""
+    response += "- Merged the two dataframes on 'Product Purchase ID'\n"
+    response += '- Sorted the merged dataframe by total customers purchased in descending order\n'
+    response += '- Selected the top 5 products\n'
+    response += '- Renamed the columns\n'
+    response += '- Selected the required columns\n'
+    return {'type': 'dataframe', 'value': df_result, 'response': response}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:36:13 [WARNING] Error of executing code
+2023-08-24 16:36:13 [WARNING] Failed to execute code with a correction framework [retry number: 2]
+2023-08-24 16:36:13 [INFO] Failed with error: "Column(s) ['Price($)'] do not exist". Retrying
+2023-08-24 16:38:20 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df_products = dfs[1][['id', 'price($)']]
+    df_grouped = dfs[0].groupby('Product Purchase ID').agg({'Email': 'count', 'Price($)': 'sum'}).reset_index()
+    df_merged = pd.merge(df_grouped, df_products, left_on='Product Purchase ID', right_on='id')
+    df_sorted = df_merged.sort_values('Email', ascending=False)
+    df_top_5 = df_sorted.head(5)
+    df_top_5.rename(columns={'Product Purchase ID': 'id', 'Email': 'Total Customers Purchased', 'Price($)': 'Total Revenue Generated'}, inplace=True)
+    df_result = df_top_5[['id', 'Total Customers Purchased', 'Total Revenue Generated']]
+    response += 'To calculate the response, the following steps were performed:\n'
+    response += "- Extracted the 'id' and 'price($)' columns from dfs[1]\n"
+    response += """- Grouped the data in dfs[0] by 'Product Purchase ID' and calculated the total customers purchased and total revenue generated
+"""
+    response += "- Merged the two dataframes on 'Product Purchase ID'\n"
+    response += '- Sorted the merged dataframe by total customers purchased in descending order\n'
+    response += '- Selected the top 5 products\n'
+    response += '- Renamed the columns\n'
+    response += '- Selected the required columns\n'
+    return {'type': 'dataframe', 'value': df_result, 'response': response}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:38:20 [WARNING] Error of executing code
+2023-08-24 16:38:20 [INFO] Question: 
+Let me know, app or website on which most time spent by customers.
+
+2023-08-24 16:38:20 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:38:20 [INFO] Prompt ID: 0bfcaf7f-af90-4cee-b8e0-be585b41e8b1
+2023-08-24 16:38:41 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes into one based on the common column "Product Purchase ID"
+    merged_df = pd.merge(dfs[0], dfs[1], left_on="Product Purchase ID", right_on="id", how="inner")
+    
+    # Calculate the total time spent on the app and website by summing the "Time on App" and "Time on Website" columns
+    merged_df["Total Time Spent"] = merged_df["Time on App"] + merged_df["Time on Website"]
+    
+    # Determine whether the app or website was used more by comparing the "Time on App" and "Time on Website" columns
+    most_time_spent = "App" if merged_df["Time on App"].sum() > merged_df["Time on Website"].sum() else "Website"
+    
+    # Return the result as a text
+    return {"type": "text", "value": f"The app or website on which most time was spent by customers is {most_time_spent}."}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:38:41 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = pd.merge(dfs[0], dfs[1], left_on='Product Purchase ID', right_on='id', how='inner')
+    merged_df['Total Time Spent'] = merged_df['Time on App'] + merged_df['Time on Website']
+    most_time_spent = 'App' if merged_df['Time on App'].sum() > merged_df['Time on Website'].sum() else 'Website'
+    return {'type': 'text', 'value': f'The app or website on which most time was spent by customers is {most_time_spent}.'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:38:41 [INFO] Answer: {'type': 'text', 'value': 'The app or website on which most time was spent by customers is Website.'}
+2023-08-24 16:38:41 [INFO] Executed in: 20.958898782730103s
+2023-08-24 16:47:03 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id of product, total customers purchased it & total revenue generated from it
+generate response in dataframe.
+
+2023-08-24 16:47:03 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:47:03 [INFO] Prompt ID: 48a5c3d9-815e-4a34-92f0-e33635a923ed
+2023-08-24 16:47:25 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column 'Product Purchase ID'
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    
+    # Group by product id and calculate the total customers and total revenue for each product
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    
+    # Sort the dataframe by total revenue in descending order
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    
+    # Select the top 5 products
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.rename(columns={'Email': 'Total Customers', 'price($)': 'Total Revenue'}, inplace=True)
+    
+    # Return the result as a dataframe
+    return {'type': 'dataframe', 'value': top_5_products}
+
+# Declare a result variable
+result = analyze_data(dfs)
+result
+                    ```
+                
+2023-08-24 16:47:25 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'Total Customers', 'price($)': 'Total Revenue'}, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+result
+        ```
+2023-08-24 16:47:25 [INFO] Answer: {'type': 'dataframe', 'value':        id                                               name  Total Customers  \
+38  14715  Toshiba Rechargeable 5-Hour Battery Pack - MED...                4   
+40  15452              Sony Stereo Audio Receiver - STRDE197                4   
+35  14061                Kenwood 6-Disc CD Changer - KDCC669                4   
+34  14033  Garmin Deluxe Carrying Case - Black Finish - 0...                4   
+48  16669               Omnimount TV Top Shelf Mount - CCH1B                4   
+
+    Total Revenue  
+38           3696  
+40           3472  
+35           3148  
+34           3136  
+48           2776  }
+2023-08-24 16:47:25 [INFO] Executed in: 21.894656896591187s
+2023-08-24 16:47:41 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id of product, total customers purchased it & total revenue generated from it
+generate response in dataframe.
+
+2023-08-24 16:47:41 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:47:41 [INFO] Prompt ID: b52c0fa7-58cf-4713-a149-1379528c0923
+2023-08-24 16:47:41 [INFO] Using cached response
+2023-08-24 16:47:41 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column 'Product Purchase ID'
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    
+    # Group by product id and calculate the total customers and total revenue for each product
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    
+    # Sort the dataframe by total revenue in descending order
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    
+    # Select the top 5 products
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.rename(columns={'Email': 'Total Customers', 'price($)': 'Total Revenue'}, inplace=True)
+    
+    # Return the result as a dataframe
+    return {'type': 'dataframe', 'value': top_5_products}
+
+# Declare a result variable
+result = analyze_data(dfs)
+result
+                    ```
+                
+2023-08-24 16:47:41 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'Total Customers', 'price($)': 'Total Revenue'}, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+result
+        ```
+2023-08-24 16:47:41 [INFO] Answer: {'type': 'dataframe', 'value':        id                                               name  Total Customers  \
+38  14715  Toshiba Rechargeable 5-Hour Battery Pack - MED...                4   
+40  15452              Sony Stereo Audio Receiver - STRDE197                4   
+35  14061                Kenwood 6-Disc CD Changer - KDCC669                4   
+34  14033  Garmin Deluxe Carrying Case - Black Finish - 0...                4   
+48  16669               Omnimount TV Top Shelf Mount - CCH1B                4   
+
+    Total Revenue  
+38           3696  
+40           3472  
+35           3148  
+34           3136  
+48           2776  }
+2023-08-24 16:47:41 [INFO] Executed in: 0.027547836303710938s
+2023-08-24 16:48:08 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id of product, total customers purchased it & total revenue generated from it. 
+generate response in dataframe of 3 columns.
+
+2023-08-24 16:48:08 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:48:08 [INFO] Prompt ID: 75f666b3-22f3-4d24-a25f-1016c4f81238
+2023-08-24 16:49:53 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Merge the two dataframes on the common column 'Product Purchase ID'
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    
+    # Group by product id and calculate the total customers and total revenue for each product
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    
+    # Sort the dataframe by total revenue in descending order
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    
+    # Select the top 5 products
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.columns = ['Product ID', 'Product Name', 'Total Customers', 'Total Revenue']
+    
+    # Convert the dataframe to a dictionary
+    result = {'type': 'dataframe', 'value': top_5_products}
+    
+    return result
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:49:53 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.columns = ['Product ID', 'Product Name', 'Total Customers', 'Total Revenue']
+    result = {'type': 'dataframe', 'value': top_5_products}
+    return result
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:49:53 [INFO] Answer: {'type': 'dataframe', 'value':     Product ID                                       Product Name  \
+38       14715  Toshiba Rechargeable 5-Hour Battery Pack - MED...   
+40       15452              Sony Stereo Audio Receiver - STRDE197   
+35       14061                Kenwood 6-Disc CD Changer - KDCC669   
+34       14033  Garmin Deluxe Carrying Case - Black Finish - 0...   
+48       16669               Omnimount TV Top Shelf Mount - CCH1B   
+
+    Total Customers  Total Revenue  
+38                4           3696  
+40                4           3472  
+35                4           3148  
+34                4           3136  
+48                4           2776  }
+2023-08-24 16:49:53 [INFO] Executed in: 104.84732794761658s
+2023-08-24 16:50:49 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id, total customers purchased it & total revenue generated from it. 
+generate response in dataframe.
+
+2023-08-24 16:50:49 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:50:49 [INFO] Prompt ID: dd3f78ca-94da-4a5f-92d1-a355d575c5a7
+2023-08-24 16:51:15 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Merge the two dataframes on the common column 'Product Purchase ID' and 'id'
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    
+    # Group by product id and calculate the total customers purchased and total revenue generated
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    
+    # Sort the dataframe by total revenue generated in descending order
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    
+    # Select the top 5 products
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.rename(columns={'Email': 'Total Customers Purchased', 'price($)': 'Total Revenue Generated'}, inplace=True)
+    
+    # Return the result as a dataframe
+    return {'type': 'dataframe', 'value': top_5_products}
+
+# Declare a result variable
+result = analyze_data(dfs)
+result
+                    ```
+                
+2023-08-24 16:51:15 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'Total Customers Purchased', 'price($)': 'Total Revenue Generated'}, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+result
+        ```
+2023-08-24 16:51:15 [INFO] Answer: {'type': 'dataframe', 'value':        id                                               name  \
+38  14715  Toshiba Rechargeable 5-Hour Battery Pack - MED...   
+40  15452              Sony Stereo Audio Receiver - STRDE197   
+35  14061                Kenwood 6-Disc CD Changer - KDCC669   
+34  14033  Garmin Deluxe Carrying Case - Black Finish - 0...   
+48  16669               Omnimount TV Top Shelf Mount - CCH1B   
+
+    Total Customers Purchased  Total Revenue Generated  
+38                          4                     3696  
+40                          4                     3472  
+35                          4                     3148  
+34                          4                     3136  
+48                          4                     2776  }
+2023-08-24 16:51:15 [INFO] Executed in: 25.8432137966156s
+2023-08-24 16:51:42 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id, total customers purchased it & total revenue generated from it. 
+generate response in dataframe. name of product not required in response
+
+2023-08-24 16:51:42 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:51:42 [INFO] Prompt ID: b38c13aa-b428-44a0-9489-94fa0ce9a3f3
+2023-08-24 16:52:04 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Merge the two dataframes on the common column 'Product Purchase ID'
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    
+    # Group by product id and calculate the total customers and total revenue for each product
+    grouped_df = merged_df.groupby('id').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    
+    # Sort the dataframe by total revenue in descending order
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    
+    # Select the top 5 products with highest total revenue
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.rename(columns={'Email': 'Total Customers', 'price($)': 'Total Revenue'}, inplace=True)
+    
+    # Remove the 'name' column
+    top_5_products.drop('name', axis=1, inplace=True)
+    
+    # Return the result as a dataframe
+    return {'type': 'dataframe', 'value': top_5_products}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:52:04 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby('id').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'Total Customers', 'price($)': 'Total Revenue'}, inplace=True)
+    top_5_products.drop('name', axis=1, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:52:04 [WARNING] Error of executing code
+2023-08-24 16:52:04 [WARNING] Failed to execute code with a correction framework [retry number: 1]
+2023-08-24 16:52:04 [INFO] Failed with error: "['name'] not found in axis". Retrying
+2023-08-24 16:52:31 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby('id').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'Total Customers', 'price($)': 'Total Revenue'}, inplace=True)
+    top_5_products.drop('name', axis=1, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:52:31 [WARNING] Error of executing code
+2023-08-24 16:52:31 [WARNING] Failed to execute code with a correction framework [retry number: 2]
+2023-08-24 16:52:31 [INFO] Failed with error: "['name'] not found in axis". Retrying
+2023-08-24 16:52:54 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby('id').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'Total Customers', 'price($)': 'Total Revenue'}, inplace=True)
+    top_5_products.drop('name', axis=1, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:52:54 [WARNING] Error of executing code
+2023-08-24 16:52:54 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id, total customers purchased it & total revenue generated from it. 
+generate response in dataframe. name of product not required in response
+
+2023-08-24 16:52:54 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:52:54 [INFO] Prompt ID: 07ee4944-510c-4ef8-860c-855bcdc14ba3
+2023-08-24 16:53:21 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column "Product Purchase ID"
+    merged_df = dfs[0].merge(dfs[1], left_on="Product Purchase ID", right_on="id")
+    
+    # Group by product id and calculate the total customers and total revenue for each product
+    grouped_df = merged_df.groupby("id").agg({"Email": "nunique", "price($)": "sum"}).reset_index()
+    
+    # Sort the dataframe by total revenue in descending order
+    sorted_df = grouped_df.sort_values("price($)", ascending=False)
+    
+    # Select the top 5 products with highest total revenue
+    top_5_products = sorted_df.head(5)
+    
+    # Remove the "Email" column from the dataframe
+    top_5_products = top_5_products.drop("Email", axis=1)
+    
+    # Rename the columns
+    top_5_products.columns = ["Product ID", "Total Customers", "Total Revenue"]
+    
+    # Convert the dataframe to dictionary format
+    result = top_5_products.to_dict(orient="records")
+    
+    # Return the result
+    return {"type": "dataframe", "value": result}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:53:21 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby('id').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products = top_5_products.drop('Email', axis=1)
+    top_5_products.columns = ['Product ID', 'Total Customers', 'Total Revenue']
+    result = top_5_products.to_dict(orient='records')
+    return {'type': 'dataframe', 'value': result}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:53:21 [WARNING] Error of executing code
+2023-08-24 16:53:21 [WARNING] Failed to execute code with a correction framework [retry number: 1]
+2023-08-24 16:53:21 [INFO] Failed with error: Length mismatch: Expected axis has 2 elements, new values have 3 elements. Retrying
+2023-08-24 16:53:45 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby('Product Purchase ID').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products = top_5_products.drop('Email', axis=1)
+    top_5_products.columns = ['Product ID', 'Total Customers', 'Total Revenue']
+    result = top_5_products.to_dict(orient='records')
+    return {'type': 'dataframe', 'value': result}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:53:45 [WARNING] Error of executing code
+2023-08-24 16:53:45 [WARNING] Failed to execute code with a correction framework [retry number: 2]
+2023-08-24 16:53:45 [INFO] Failed with error: Length mismatch: Expected axis has 2 elements, new values have 3 elements. Retrying
+2023-08-24 16:55:31 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby('Product Purchase ID').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products = top_5_products.drop('Email', axis=1)
+    top_5_products.columns = ['Product ID', 'Total Customers', 'Total Revenue']
+    result = top_5_products.to_dict(orient='records')
+    return {'type': 'dataframe', 'value': result}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:55:31 [WARNING] Error of executing code
+2023-08-24 16:55:31 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id, total customers purchased it & total revenue generated from it. 
+generate response in dataframe.
+
+2023-08-24 16:55:31 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:55:31 [INFO] Prompt ID: c124568a-cbb0-4fad-bdfa-75fb078c839b
+2023-08-24 16:55:31 [INFO] Using cached response
+2023-08-24 16:55:31 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Merge the two dataframes on the common column 'Product Purchase ID' and 'id'
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    
+    # Group by product id and calculate the total customers purchased and total revenue generated
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    
+    # Sort the dataframe by total revenue generated in descending order
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    
+    # Select the top 5 products
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.rename(columns={'Email': 'Total Customers Purchased', 'price($)': 'Total Revenue Generated'}, inplace=True)
+    
+    # Return the result as a dataframe
+    return {'type': 'dataframe', 'value': top_5_products}
+
+# Declare a result variable
+result = analyze_data(dfs)
+result
+                    ```
+                
+2023-08-24 16:55:31 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby(['id', 'name']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'Total Customers Purchased', 'price($)': 'Total Revenue Generated'}, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+result
+        ```
+2023-08-24 16:55:31 [INFO] Answer: {'type': 'dataframe', 'value':        id                                               name  \
+38  14715  Toshiba Rechargeable 5-Hour Battery Pack - MED...   
+40  15452              Sony Stereo Audio Receiver - STRDE197   
+35  14061                Kenwood 6-Disc CD Changer - KDCC669   
+34  14033  Garmin Deluxe Carrying Case - Black Finish - 0...   
+48  16669               Omnimount TV Top Shelf Mount - CCH1B   
+
+    Total Customers Purchased  Total Revenue Generated  
+38                          4                     3696  
+40                          4                     3472  
+35                          4                     3148  
+34                          4                     3136  
+48                          4                     2776  }
+2023-08-24 16:55:31 [INFO] Executed in: 0.014162063598632812s
+2023-08-24 16:55:45 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id, total customers purchased it & total revenue generated from it. 
+generate response in dataframe. name not required
+
+2023-08-24 16:55:45 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:55:45 [INFO] Prompt ID: 0eeed47b-34c6-4319-89ea-f5862f384d31
+2023-08-24 16:57:07 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Merge the two dataframes on the common column 'Product Purchase ID'
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    
+    # Group by product id and calculate the total customers purchased and total revenue generated
+    grouped_df = merged_df.groupby('id').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    
+    # Sort the dataframe by total revenue generated in descending order
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    
+    # Select the top 5 products
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.rename(columns={'id': 'Product ID', 'Email': 'Total Customers Purchased', 'price($)': 'Total Revenue Generated'}, inplace=True)
+    
+    # Remove the 'name' column
+    top_5_products.drop('name', axis=1, inplace=True)
+    
+    # Return the dataframe as the output
+    return {'type': 'dataframe', 'value': top_5_products}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:57:07 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby('id').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'id': 'Product ID', 'Email': 'Total Customers Purchased', 'price($)': 'Total Revenue Generated'}, inplace=True)
+    top_5_products.drop('name', axis=1, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:57:07 [WARNING] Error of executing code
+2023-08-24 16:57:07 [WARNING] Failed to execute code with a correction framework [retry number: 1]
+2023-08-24 16:57:07 [INFO] Failed with error: "['name'] not found in axis". Retrying
+2023-08-24 16:57:33 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby('id').agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values('price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'id': 'Product ID', 'Email': 'Total Customers Purchased', 'price($)': 'Total Revenue Generated'}, inplace=True)
+    if 'name' in top_5_products.columns:
+        top_5_products.drop('name', axis=1, inplace=True)
+    return {'type': 'dataframe', 'value': top_5_products}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:57:33 [INFO] Answer: {'type': 'dataframe', 'value':     Product ID  Total Customers Purchased  Total Revenue Generated
+38       14715                          4                     3696
+40       15452                          4                     3472
+35       14061                          4                     3148
+34       14033                          4                     3136
+48       16669                          4                     2776}
+2023-08-24 16:57:33 [INFO] Executed in: 107.99568605422974s
+2023-08-24 16:57:44 [INFO] Question: 
+Generate highest selled 5 products. 
+In answer give id, total customers purchased it & total revenue generated from it. these are the only 3 columns required in output
+generate response in dataframe.
+
+2023-08-24 16:57:44 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:57:44 [INFO] Prompt ID: 4a965b95-d62a-4f35-862b-c39486682884
+2023-08-24 16:58:13 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column 'Product Purchase ID'
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    
+    # Group by product id and calculate the total customers and total revenue for each product
+    grouped_df = merged_df.groupby(['id']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    
+    # Sort the dataframe by total revenue in descending order
+    sorted_df = grouped_df.sort_values(by='price($)', ascending=False)
+    
+    # Select the top 5 products with highest total revenue
+    top_5_products = sorted_df.head(5)
+    
+    # Rename the columns
+    top_5_products.rename(columns={'Email': 'total customers purchased', 'price($)': 'total revenue generated'}, inplace=True)
+    
+    # Select only the required columns
+    output_df = top_5_products[['id', 'total customers purchased', 'total revenue generated']]
+    
+    # Return the output dataframe
+    return {'type': 'dataframe', 'value': output_df}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:58:13 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    grouped_df = merged_df.groupby(['id']).agg({'Email': 'nunique', 'price($)': 'sum'}).reset_index()
+    sorted_df = grouped_df.sort_values(by='price($)', ascending=False)
+    top_5_products = sorted_df.head(5)
+    top_5_products.rename(columns={'Email': 'total customers purchased', 'price($)': 'total revenue generated'}, inplace=True)
+    output_df = top_5_products[['id', 'total customers purchased', 'total revenue generated']]
+    return {'type': 'dataframe', 'value': output_df}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:58:13 [INFO] Answer: {'type': 'dataframe', 'value':        id  total customers purchased  total revenue generated
+38  14715                          4                     3696
+40  15452                          4                     3472
+35  14061                          4                     3148
+34  14033                          4                     3136
+48  16669                          4                     2776}
+2023-08-24 16:58:13 [INFO] Executed in: 28.56826400756836s
+2023-08-24 16:58:18 [INFO] Question: 
+Generate number of customers who purchase product with price between 100 to 200, 200 to 300, and so on till 900. 
+Plot bar graph price range vs total customers
+
+2023-08-24 16:58:18 [INFO] Running PandasAI with openai LLM...
+2023-08-24 16:58:18 [INFO] Prompt ID: 072efa37-09bc-438e-8442-160187d70331
+2023-08-24 16:58:45 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column "Product Purchase ID"
+    merged_df = dfs[0].merge(dfs[1], left_on="Product Purchase ID", right_on="id")
+    
+    # Create a new column "Price Range" based on the price of the product
+    merged_df["Price Range"] = pd.cut(merged_df["price($)"], bins=range(100, 1000, 100))
+    
+    # Group the data by "Price Range" and count the number of customers in each range
+    customer_count = merged_df.groupby("Price Range")["Email"].count()
+    
+    # Plot the bar graph
+    plt.bar(customer_count.index.astype(str), customer_count.values)
+    plt.xlabel("Price Range")
+    plt.ylabel("Total Customers")
+    plt.title("Price Range vs Total Customers")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    
+    # Save the plot to an image file
+    plt.savefig("exports/charts/temp_chart.png")
+    plt.close()
+    
+    # Return the path of the plot as the output
+    return {"type": "plot", "value": "exports/charts/temp_chart.png"}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 16:58:45 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    merged_df['Price Range'] = pd.cut(merged_df['price($)'], bins=range(100, 1000, 100))
+    customer_count = merged_df.groupby('Price Range')['Email'].count()
+    plt.bar(customer_count.index.astype(str), customer_count.values)
+    plt.xlabel('Price Range')
+    plt.ylabel('Total Customers')
+    plt.title('Price Range vs Total Customers')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 16:58:45 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 16:58:45 [INFO] Executed in: 27.705185890197754s
+2023-08-24 17:13:34 [INFO] Question: 
+Create age ranges 10 to 20, 20 to 30, etc. till 100 and total customers from each range.
+Plot line graph age range vs total customers also show purchasing power of each age range
+
+2023-08-24 17:13:34 [INFO] Running PandasAI with openai LLM...
+2023-08-24 17:13:34 [INFO] Prompt ID: 0ab3acdf-6081-447d-9e67-6148021560cc
+2023-08-24 17:13:34 [WARNING] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x137863990>: Failed to resolve 'api.openai.com' ([Errno 8] nodename nor servname provided, or not known)")': /v1/chat/completions
+2023-08-24 17:13:34 [WARNING] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x137863810>: Failed to resolve 'api.openai.com' ([Errno 8] nodename nor servname provided, or not known)")': /v1/chat/completions
+2023-08-24 17:44:41 [INFO] Question: 
+Create age ranges 10 to 20, 20 to 30, etc. till 100 and total customers from each range.
+Plot line graph age range vs total customers also show purchasing power of each age range
+
+2023-08-24 17:44:41 [INFO] Running PandasAI with openai LLM...
+2023-08-24 17:44:41 [INFO] Prompt ID: bf3bffd3-e130-465d-9912-1d0fcdcc3080
+2023-08-24 17:45:26 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the dataframes into a single dataframe
+    df = pd.concat(dfs)
+
+    # Convert the 'Age' column to numeric
+    df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
+
+    # Create age ranges
+    age_ranges = range(10, 110, 10)
+
+    # Group customers by age range and count the number of customers in each range
+    customers_by_age_range = df.groupby(pd.cut(df['Age'], age_ranges)).size()
+
+    # Calculate the total purchasing power of each age range
+    purchasing_power_by_age_range = df.groupby(pd.cut(df['Age'], age_ranges))['Product Purchase ID'].sum()
+
+    # Create a line graph of age range vs total customers and purchasing power
+    fig, ax1 = plt.subplots()
+    ax2 = ax1.twinx()
+    customers_by_age_range.plot(kind='line', ax=ax1, color='blue', marker='o', label='Total Customers')
+    purchasing_power_by_age_range.plot(kind='line', ax=ax2, color='red', marker='o', label='Purchasing Power')
+    ax1.set_xlabel('Age Range')
+    ax1.set_ylabel('Total Customers')
+    ax2.set_ylabel('Purchasing Power')
+    ax1.legend(loc='upper left')
+    ax2.legend(loc='upper right')
+    plt.title('Age Range vs Total Customers and Purchasing Power')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+
+    # Prepare the output dictionary
+    output = {
+        "type": "plot",
+        "value": "exports/charts/temp_chart.png"
+    }
+
+    return output
+
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 17:45:26 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df = pd.concat(dfs)
+    df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
+    age_ranges = range(10, 110, 10)
+    customers_by_age_range = df.groupby(pd.cut(df['Age'], age_ranges)).size()
+    purchasing_power_by_age_range = df.groupby(pd.cut(df['Age'], age_ranges))['Product Purchase ID'].sum()
+    fig, ax1 = plt.subplots()
+    ax2 = ax1.twinx()
+    customers_by_age_range.plot(kind='line', ax=ax1, color='blue', marker='o', label='Total Customers')
+    purchasing_power_by_age_range.plot(kind='line', ax=ax2, color='red', marker='o', label='Purchasing Power')
+    ax1.set_xlabel('Age Range')
+    ax1.set_ylabel('Total Customers')
+    ax2.set_ylabel('Purchasing Power')
+    ax1.legend(loc='upper left')
+    ax2.legend(loc='upper right')
+    plt.title('Age Range vs Total Customers and Purchasing Power')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    output = {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+    return output
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 17:45:26 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 17:45:26 [INFO] Executed in: 45.62054085731506s
+2023-08-24 17:47:13 [INFO] Question: 
+Create age ranges 10 to 20, 20 to 30, etc. till 100 and total customers from each range.
+Plot line graph age range vs total customers 
+
+2023-08-24 17:47:13 [INFO] Running PandasAI with openai LLM...
+2023-08-24 17:47:13 [INFO] Prompt ID: c97c0fb2-2da0-4e99-b414-51bf4d692751
+2023-08-24 17:47:22 [INFO] Question: 
+Create age ranges 10 to 20, 20 to 30, etc. till 100 and total customers from each range.
+Plot line graph age range vs total customers 
+
+2023-08-24 17:47:22 [INFO] Running PandasAI with openai LLM...
+2023-08-24 17:47:22 [INFO] Prompt ID: ceb4f881-0f13-45af-9e0e-17c366739782
+2023-08-24 17:47:56 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the dataframes into a single dataframe
+    df = pd.concat(dfs)
+
+    # Convert the 'Age' column to numeric
+    df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
+
+    # Create age ranges
+    age_ranges = range(10, 110, 10)
+
+    # Group customers by age range and count the number of customers in each range
+    customers_by_age_range = df.groupby(pd.cut(df['Age'], age_ranges)).size()
+
+    # Plot line graph age range vs total customers
+    plt.plot(customers_by_age_range.index.astype(str), customers_by_age_range.values)
+    plt.xlabel('Age Range')
+    plt.ylabel('Total Customers')
+    plt.title('Age Range vs Total Customers')
+    plt.xticks(rotation=45)
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+
+    # Return the path of the plot
+    return {"type": "plot", "value": "exports/charts/temp_chart.png"}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 17:47:56 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df = pd.concat(dfs)
+    df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
+    age_ranges = range(10, 110, 10)
+    customers_by_age_range = df.groupby(pd.cut(df['Age'], age_ranges)).size()
+    plt.plot(customers_by_age_range.index.astype(str), customers_by_age_range.values)
+    plt.xlabel('Age Range')
+    plt.ylabel('Total Customers')
+    plt.title('Age Range vs Total Customers')
+    plt.xticks(rotation=45)
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 17:47:56 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 17:47:56 [INFO] Executed in: 33.91315007209778s
+2023-08-24 17:51:27 [INFO] Question: 
+Calculate purchasing power of gender.
+Plot Doughnut charts gender vs purchasing power 
+
+2023-08-24 17:51:27 [INFO] Running PandasAI with openai LLM...
+2023-08-24 17:51:27 [INFO] Prompt ID: 30684f6d-0597-4ed1-8891-04dab1354006
+2023-08-24 17:52:01 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column "Product Purchase ID"
+    merged_df = pd.merge(dfs[0], dfs[1], left_on="Product Purchase ID", right_on="id", how="inner")
+    
+    # Group the data by gender and calculate the sum of prices
+    gender_purchasing_power = merged_df.groupby("Gender")["price($)"].sum().reset_index()
+    
+    # Plot the doughnut chart
+    fig, ax = plt.subplots()
+    ax.pie(gender_purchasing_power["price($)"], labels=gender_purchasing_power["Gender"], autopct='%1.1f%%', startangle=90)
+    ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    plt.title("Gender vs Purchasing Power")
+    
+    # Save the plot to an image file
+    plt.savefig("exports/charts/temp_chart.png")
+    plt.close(fig)
+    
+    # Return the path of the plot as the output
+    return {"type": "plot", "value": "exports/charts/temp_chart.png"}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 17:52:01 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = pd.merge(dfs[0], dfs[1], left_on='Product Purchase ID', right_on='id', how='inner')
+    gender_purchasing_power = merged_df.groupby('Gender')['price($)'].sum().reset_index()
+    fig, ax = plt.subplots()
+    ax.pie(gender_purchasing_power['price($)'], labels=gender_purchasing_power['Gender'], autopct='%1.1f%%', startangle=90)
+    ax.axis('equal')
+    plt.title('Gender vs Purchasing Power')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close(fig)
+    return {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 17:52:01 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 17:52:01 [INFO] Executed in: 34.0561888217926s
+2023-08-24 17:52:38 [INFO] Question: 
+Create age ranges 10 to 20, 20 to 30, etc. till 100 and total customers from each range.
+Plot Doughnut charts age range vs total customers 
+
+2023-08-24 17:52:38 [INFO] Running PandasAI with openai LLM...
+2023-08-24 17:52:38 [INFO] Prompt ID: c26aafcc-843c-42cc-a336-62c595b95eda
+2023-08-24 17:53:10 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the dataframes into a single dataframe
+    df = pd.concat(dfs)
+
+    # Convert the 'Age' column to numeric
+    df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
+
+    # Create age ranges
+    age_ranges = range(10, 110, 10)
+
+    # Group customers by age range and count the number of customers in each range
+    customer_counts = df.groupby(pd.cut(df['Age'], age_ranges)).size()
+
+    # Plot doughnut chart
+    plt.pie(customer_counts, labels=customer_counts.index, autopct='%1.1f%%', startangle=90)
+    plt.axis('equal')
+    plt.title('Age Range vs Total Customers')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+
+    # Return the path of the plot
+    return {"type": "plot", "value": "exports/charts/temp_chart.png"}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 17:53:10 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    df = pd.concat(dfs)
+    df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
+    age_ranges = range(10, 110, 10)
+    customer_counts = df.groupby(pd.cut(df['Age'], age_ranges)).size()
+    plt.pie(customer_counts, labels=customer_counts.index, autopct='%1.1f%%', startangle=90)
+    plt.axis('equal')
+    plt.title('Age Range vs Total Customers')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 17:53:10 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 17:53:10 [INFO] Executed in: 31.722568035125732s
+2023-08-24 17:53:22 [INFO] Question: 
+Calculate purchasing power of gender.
+Plot line chart gender vs purchasing power 
+
+2023-08-24 17:53:22 [INFO] Running PandasAI with openai LLM...
+2023-08-24 17:53:22 [INFO] Prompt ID: 99f13296-d810-42d3-bc3d-0a80b7fe9ac0
+2023-08-24 17:54:34 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Code goes here (do not add comments)
+    # Merge the two dataframes on the common column "Product Purchase ID"
+    merged_df = pd.merge(dfs[0], dfs[1], left_on="Product Purchase ID", right_on="id", how="inner")
+    
+    # Group the merged dataframe by gender and calculate the sum of price
+    purchasing_power = merged_df.groupby("Gender")["price($)"].sum().reset_index()
+    
+    # Plot line chart gender vs purchasing power
+    plt.plot(purchasing_power["Gender"], purchasing_power["price($)"])
+    plt.xlabel("Gender")
+    plt.ylabel("Purchasing Power")
+    plt.title("Gender vs Purchasing Power")
+    plt.savefig("exports/charts/temp_chart.png")
+    plt.close()
+    
+    # Return the plot path as the output
+    return {"type": "plot", "value": "exports/charts/temp_chart.png"}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 17:54:34 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = pd.merge(dfs[0], dfs[1], left_on='Product Purchase ID', right_on='id', how='inner')
+    purchasing_power = merged_df.groupby('Gender')['price($)'].sum().reset_index()
+    plt.plot(purchasing_power['Gender'], purchasing_power['price($)'])
+    plt.xlabel('Gender')
+    plt.ylabel('Purchasing Power')
+    plt.title('Gender vs Purchasing Power')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 17:54:34 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 17:54:34 [INFO] Executed in: 72.36558389663696s
+2023-08-24 17:57:07 [INFO] Question: 
+Calculate purchasing power of gender & age ranges 10 to 20, 20 to 30, etc. till 100.
+Plot Combo charts made up of age range vs purchasing power should be bar chart & gender should have line chart
+
+2023-08-24 17:57:07 [INFO] Running PandasAI with openai LLM...
+2023-08-24 17:57:07 [INFO] Prompt ID: 219a271f-c948-4780-bbc4-3589386d2360
+2023-08-24 17:58:22 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column "Product Purchase ID"
+    merged_df = dfs[0].merge(dfs[1], left_on="Product Purchase ID", right_on="id")
+
+    # Create age ranges
+    age_ranges = list(range(10, 101, 10))
+
+    # Calculate purchasing power for each gender and age range
+    purchasing_power = []
+    for i in range(len(age_ranges)-1):
+        age_min = age_ranges[i]
+        age_max = age_ranges[i+1]
+        age_range_df = merged_df[(merged_df["Age"] >= age_min) & (merged_df["Age"] < age_max)]
+        purchasing_power.append({
+            "Age Range": f"{age_min}-{age_max}",
+            "Male": age_range_df[age_range_df["Gender"] == "Male"]["price($)"].sum(),
+            "Female": age_range_df[age_range_df["Gender"] == "Female"]["price($)"].sum()
+        })
+
+    # Convert the result to a dataframe
+    purchasing_power_df = pd.DataFrame(purchasing_power)
+
+    # Plot Combo chart
+    fig, ax1 = plt.subplots()
+
+    # Bar chart for age range vs purchasing power
+    ax1.bar(purchasing_power_df["Age Range"], purchasing_power_df["Male"], label="Male")
+    ax1.bar(purchasing_power_df["Age Range"], purchasing_power_df["Female"], bottom=purchasing_power_df["Male"], label="Female")
+    ax1.set_xlabel("Age Range")
+    ax1.set_ylabel("Purchasing Power ($)")
+    ax1.set_title("Age Range vs Purchasing Power")
+    ax1.legend()
+
+    # Line chart for gender
+    ax2 = ax1.twinx()
+    ax2.plot(purchasing_power_df["Age Range"], purchasing_power_df["Male"], color="red", marker="o", label="Male")
+    ax2.plot(purchasing_power_df["Age Range"], purchasing_power_df["Female"], color="blue", marker="o", label="Female")
+    ax2.set_ylabel("Purchasing Power ($)")
+    ax2.legend(loc="upper right")
+
+    # Save the plot to an image
+    plt.savefig("exports/charts/temp_chart.png")
+
+    # Return the path of the plot
+    return {"type": "plot", "value": "exports/charts/temp_chart.png"}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 17:58:22 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    age_ranges = list(range(10, 101, 10))
+    purchasing_power = []
+    for i in range(len(age_ranges) - 1):
+        age_min = age_ranges[i]
+        age_max = age_ranges[i + 1]
+        age_range_df = merged_df[(merged_df['Age'] >= age_min) & (merged_df['Age'] < age_max)]
+        purchasing_power.append({'Age Range': f'{age_min}-{age_max}', 'Male': age_range_df[age_range_df['Gender'] == 'Male']['price($)'].sum(), 'Female': age_range_df[age_range_df['Gender'] == 'Female']['price($)'].sum()})
+    purchasing_power_df = pd.DataFrame(purchasing_power)
+    fig, ax1 = plt.subplots()
+    ax1.bar(purchasing_power_df['Age Range'], purchasing_power_df['Male'], label='Male')
+    ax1.bar(purchasing_power_df['Age Range'], purchasing_power_df['Female'], bottom=purchasing_power_df['Male'], label='Female')
+    ax1.set_xlabel('Age Range')
+    ax1.set_ylabel('Purchasing Power ($)')
+    ax1.set_title('Age Range vs Purchasing Power')
+    ax1.legend()
+    ax2 = ax1.twinx()
+    ax2.plot(purchasing_power_df['Age Range'], purchasing_power_df['Male'], color='red', marker='o', label='Male')
+    ax2.plot(purchasing_power_df['Age Range'], purchasing_power_df['Female'], color='blue', marker='o', label='Female')
+    ax2.set_ylabel('Purchasing Power ($)')
+    ax2.legend(loc='upper right')
+    plt.savefig('exports/charts/temp_chart.png')
+    return {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 17:58:22 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 17:58:22 [INFO] Executed in: 75.39481496810913s
+2023-08-24 17:59:59 [INFO] Question: 
+Calculate purchasing power of gender & age ranges 10 to 20, 20 to 30, etc. till 100.
+Plot Combo charts made up of age range & gender vs purchasing power
+
+2023-08-24 17:59:59 [INFO] Running PandasAI with openai LLM...
+2023-08-24 17:59:59 [INFO] Prompt ID: 44f0a53a-f9c3-4615-b557-ed7c80e1187e
+2023-08-24 18:00:52 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column "Product Purchase ID"
+    merged_df = pd.merge(dfs[0], dfs[1], left_on="Product Purchase ID", right_on="id")
+
+    # Create age ranges
+    age_ranges = [(10, 20), (20, 30), (30, 40), (40, 50), (50, 60), (60, 70), (70, 80), (80, 90), (90, 100)]
+
+    # Calculate purchasing power for each age range and gender
+    purchasing_power = []
+    for age_range in age_ranges:
+        min_age, max_age = age_range
+        filtered_df = merged_df[(merged_df["Age"] >= min_age) & (merged_df["Age"] < max_age)]
+        purchasing_power.append(filtered_df.groupby(["Gender"])["price($)"].sum())
+
+    # Create Combo charts
+    fig, ax = plt.subplots()
+    x = range(len(age_ranges))
+    width = 0.35
+
+    male_purchasing_power = [pp.get("Male", 0) for pp in purchasing_power]
+    female_purchasing_power = [pp.get("Female", 0) for pp in purchasing_power]
+
+    ax.bar(x, male_purchasing_power, width, label='Male')
+    ax.bar(x, female_purchasing_power, width, bottom=male_purchasing_power, label='Female')
+
+    ax.set_ylabel('Purchasing Power')
+    ax.set_xlabel('Age Range')
+    ax.set_title('Purchasing Power by Age Range and Gender')
+    ax.set_xticks(x)
+    ax.set_xticklabels([f"{min_age}-{max_age}" for min_age, max_age in age_ranges])
+    ax.legend()
+
+    # Save the plot to an image file
+    plt.savefig('exports/charts/temp_chart.png')
+
+    # Return the path of the plot
+    return {"type": "plot", "value": "exports/charts/temp_chart.png"}
+
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 18:00:52 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = pd.merge(dfs[0], dfs[1], left_on='Product Purchase ID', right_on='id')
+    age_ranges = [(10, 20), (20, 30), (30, 40), (40, 50), (50, 60), (60, 70), (70, 80), (80, 90), (90, 100)]
+    purchasing_power = []
+    for age_range in age_ranges:
+        min_age, max_age = age_range
+        filtered_df = merged_df[(merged_df['Age'] >= min_age) & (merged_df['Age'] < max_age)]
+        purchasing_power.append(filtered_df.groupby(['Gender'])['price($)'].sum())
+    fig, ax = plt.subplots()
+    x = range(len(age_ranges))
+    width = 0.35
+    male_purchasing_power = [pp.get('Male', 0) for pp in purchasing_power]
+    female_purchasing_power = [pp.get('Female', 0) for pp in purchasing_power]
+    ax.bar(x, male_purchasing_power, width, label='Male')
+    ax.bar(x, female_purchasing_power, width, bottom=male_purchasing_power, label='Female')
+    ax.set_ylabel('Purchasing Power')
+    ax.set_xlabel('Age Range')
+    ax.set_title('Purchasing Power by Age Range and Gender')
+    ax.set_xticks(x)
+    ax.set_xticklabels([f'{min_age}-{max_age}' for min_age, max_age in age_ranges])
+    ax.legend()
+    plt.savefig('exports/charts/temp_chart.png')
+    return {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 18:00:53 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 18:00:53 [INFO] Executed in: 53.93194580078125s
+2023-08-24 18:02:14 [INFO] Question: 
+Calculate purchasing power of gender & age ranges 10 to 20, 20 to 30, etc. till 100.
+Plot Combo charts made up of age range vs purchasing power should be bar chart & gender should have line chart.
+your response should contain only one chart
+
+2023-08-24 18:02:14 [INFO] Running PandasAI with openai LLM...
+2023-08-24 18:02:14 [INFO] Prompt ID: 413acb22-9906-4657-9654-f486e95d5886
+2023-08-24 18:04:48 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column "Product Purchase ID"
+    merged_df = pd.merge(dfs[0], dfs[1], left_on="Product Purchase ID", right_on="id")
+
+    # Create age ranges
+    age_ranges = list(range(10, 101, 10))
+
+    # Calculate purchasing power for each gender and age range
+    purchasing_power = []
+    for age_range in age_ranges:
+        lower_age = age_range - 10
+        upper_age = age_range
+        filtered_df = merged_df[(merged_df["Age"] >= lower_age) & (merged_df["Age"] < upper_age)]
+        total_price = filtered_df["price($)"].sum()
+        purchasing_power.append(total_price)
+
+    # Create a new dataframe with age ranges and purchasing power
+    df_purchasing_power = pd.DataFrame({"Age Range": age_ranges, "Purchasing Power": purchasing_power})
+
+    # Plot the combo chart
+    fig, ax1 = plt.subplots()
+
+    # Bar chart for age range vs purchasing power
+    ax1.bar(df_purchasing_power["Age Range"], df_purchasing_power["Purchasing Power"], color="blue")
+    ax1.set_xlabel("Age Range")
+    ax1.set_ylabel("Purchasing Power")
+
+    # Line chart for gender
+    ax2 = ax1.twinx()
+    gender_counts = dfs[0]["Gender"].value_counts()
+    ax2.plot(gender_counts.index, gender_counts.values, color="red")
+    ax2.set_ylabel("Gender Count")
+
+    # Set the title and legend
+    ax1.set_title("Age Range vs Purchasing Power and Gender Count")
+    ax1.legend(["Purchasing Power"], loc="upper left")
+    ax2.legend(["Gender Count"], loc="upper right")
+
+    # Save the plot to an image
+    plt.savefig("exports/charts/temp_chart.png")
+
+    # Return the path of the plot
+    return {"type": "plot", "value": "exports/charts/temp_chart.png"}
+
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 18:04:48 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = pd.merge(dfs[0], dfs[1], left_on='Product Purchase ID', right_on='id')
+    age_ranges = list(range(10, 101, 10))
+    purchasing_power = []
+    for age_range in age_ranges:
+        lower_age = age_range - 10
+        upper_age = age_range
+        filtered_df = merged_df[(merged_df['Age'] >= lower_age) & (merged_df['Age'] < upper_age)]
+        total_price = filtered_df['price($)'].sum()
+        purchasing_power.append(total_price)
+    df_purchasing_power = pd.DataFrame({'Age Range': age_ranges, 'Purchasing Power': purchasing_power})
+    fig, ax1 = plt.subplots()
+    ax1.bar(df_purchasing_power['Age Range'], df_purchasing_power['Purchasing Power'], color='blue')
+    ax1.set_xlabel('Age Range')
+    ax1.set_ylabel('Purchasing Power')
+    ax2 = ax1.twinx()
+    gender_counts = dfs[0]['Gender'].value_counts()
+    ax2.plot(gender_counts.index, gender_counts.values, color='red')
+    ax2.set_ylabel('Gender Count')
+    ax1.set_title('Age Range vs Purchasing Power and Gender Count')
+    ax1.legend(['Purchasing Power'], loc='upper left')
+    ax2.legend(['Gender Count'], loc='upper right')
+    plt.savefig('exports/charts/temp_chart.png')
+    return {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 18:04:49 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 18:04:49 [INFO] Executed in: 155.04226803779602s
+2023-08-24 18:05:25 [INFO] Question: 
+Calculate purchasing power of gender & age ranges 10 to 20, 20 to 30, etc. till 100.
+Plot combine chart made up of age range vs purchasing power should be bar chart & gender should have line chart.
+
+2023-08-24 18:05:25 [INFO] Running PandasAI with openai LLM...
+2023-08-24 18:05:25 [INFO] Prompt ID: 355ab06f-2044-4b1b-940a-4fd3290fdd92
+2023-08-24 18:06:23 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column "Product Purchase ID"
+    combined_df = dfs[0].merge(dfs[1], left_on="Product Purchase ID", right_on="id")
+    
+    # Create age ranges
+    age_ranges = list(range(10, 101, 10))
+    
+    # Calculate purchasing power for each gender and age range
+    purchasing_power = []
+    for age_range in age_ranges:
+        lower_age = age_range - 10
+        upper_age = age_range
+        filtered_df = combined_df[(combined_df["Age"] >= lower_age) & (combined_df["Age"] < upper_age)]
+        purchasing_power.append(filtered_df["price($)"].sum())
+    
+    # Create a bar chart for age range vs purchasing power
+    plt.bar(age_ranges, purchasing_power)
+    plt.xlabel("Age Range")
+    plt.ylabel("Purchasing Power")
+    plt.title("Age Range vs Purchasing Power")
+    plt.savefig("exports/charts/temp_chart.png")
+    plt.close()
+    
+    # Create a line chart for gender
+    gender_counts = combined_df["Gender"].value_counts()
+    plt.plot(gender_counts.index, gender_counts.values)
+    plt.xlabel("Gender")
+    plt.ylabel("Count")
+    plt.title("Gender Distribution")
+    plt.savefig("exports/charts/temp_chart2.png")
+    plt.close()
+    
+    # Return the paths of the created charts
+    return {
+        "type": "plot",
+        "value": ["exports/charts/temp_chart.png", "exports/charts/temp_chart2.png"]
+    }
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 18:06:23 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    combined_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    age_ranges = list(range(10, 101, 10))
+    purchasing_power = []
+    for age_range in age_ranges:
+        lower_age = age_range - 10
+        upper_age = age_range
+        filtered_df = combined_df[(combined_df['Age'] >= lower_age) & (combined_df['Age'] < upper_age)]
+        purchasing_power.append(filtered_df['price($)'].sum())
+    plt.bar(age_ranges, purchasing_power)
+    plt.xlabel('Age Range')
+    plt.ylabel('Purchasing Power')
+    plt.title('Age Range vs Purchasing Power')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    gender_counts = combined_df['Gender'].value_counts()
+    plt.plot(gender_counts.index, gender_counts.values)
+    plt.xlabel('Gender')
+    plt.ylabel('Count')
+    plt.title('Gender Distribution')
+    plt.savefig('exports/charts/temp_chart2.png')
+    plt.close()
+    return {'type': 'plot', 'value': ['exports/charts/temp_chart.png', 'exports/charts/temp_chart2.png']}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 18:06:23 [INFO] Answer: {'type': 'plot', 'value': ['exports/charts/temp_chart.png', 'exports/charts/temp_chart2.png']}
+2023-08-24 18:06:23 [INFO] Executed in: 58.13080716133118s
+2023-08-24 18:06:58 [INFO] Question: 
+Calculate purchasing power of gender & age ranges 10 to 20, 20 to 30, etc. till 100.
+Plot Combo chart made up of age range vs purchasing power should be bar chart & gender should have line chart.
+
+
+2023-08-24 18:06:58 [INFO] Running PandasAI with openai LLM...
+2023-08-24 18:06:58 [INFO] Prompt ID: d27307db-2d3e-4cfd-9b4c-6c761a28056c
+2023-08-24 18:09:20 [INFO] 
+                    Code generated:
+                    ```
+                    # TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Analyze the data
+# 1. Prepare: Preprocessing and cleaning data if necessary
+# 2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+# 3. Analyze: Conducting the actual analysis (if the user asks to create a chart save it to an image in exports/charts/temp_chart.png and do not show the chart.)
+# 4. Output: return a dictionary of:
+# - type (possible values "text", "number", "dataframe", "plot")
+# - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+# Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    # Combine the two dataframes on the common column "Product Purchase ID"
+    merged_df = dfs[0].merge(dfs[1], left_on="Product Purchase ID", right_on="id")
+    
+    # Convert the "Age" column to numeric
+    merged_df["Age"] = pd.to_numeric(merged_df["Age"], errors="coerce")
+    
+    # Create age ranges
+    age_ranges = list(range(10, 101, 10))
+    
+    # Calculate purchasing power for each age range and gender
+    purchasing_power = []
+    for i in range(len(age_ranges)-1):
+        age_min = age_ranges[i]
+        age_max = age_ranges[i+1]
+        age_range_df = merged_df[(merged_df["Age"] >= age_min) & (merged_df["Age"] < age_max)]
+        purchasing_power.append({
+            "Age Range": f"{age_min}-{age_max}",
+            "Male": age_range_df[age_range_df["Gender"] == "Male"]["price($)"].sum(),
+            "Female": age_range_df[age_range_df["Gender"] == "Female"]["price($)"].sum()
+        })
+    
+    # Convert the result to a dataframe
+    purchasing_power_df = pd.DataFrame(purchasing_power)
+    
+    # Plot the combo chart
+    fig, ax1 = plt.subplots()
+    ax2 = ax1.twinx()
+    
+    ax1.bar(purchasing_power_df["Age Range"], purchasing_power_df["Male"], color="blue", alpha=0.5)
+    ax2.plot(purchasing_power_df["Age Range"], purchasing_power_df["Female"], color="red")
+    
+    ax1.set_xlabel("Age Range")
+    ax1.set_ylabel("Purchasing Power (Male)", color="blue")
+    ax2.set_ylabel("Purchasing Power (Female)", color="red")
+    
+    plt.title("Age Range vs Purchasing Power")
+    plt.savefig("exports/charts/temp_chart.png")
+    plt.close()
+    
+    # Return the path of the plot
+    return {"type": "plot", "value": "exports/charts/temp_chart.png"}
+
+# Declare a result variable
+result = analyze_data(dfs)
+                    ```
+                
+2023-08-24 18:09:21 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    merged_df = dfs[0].merge(dfs[1], left_on='Product Purchase ID', right_on='id')
+    merged_df['Age'] = pd.to_numeric(merged_df['Age'], errors='coerce')
+    age_ranges = list(range(10, 101, 10))
+    purchasing_power = []
+    for i in range(len(age_ranges) - 1):
+        age_min = age_ranges[i]
+        age_max = age_ranges[i + 1]
+        age_range_df = merged_df[(merged_df['Age'] >= age_min) & (merged_df['Age'] < age_max)]
+        purchasing_power.append({'Age Range': f'{age_min}-{age_max}', 'Male': age_range_df[age_range_df['Gender'] == 'Male']['price($)'].sum(), 'Female': age_range_df[age_range_df['Gender'] == 'Female']['price($)'].sum()})
+    purchasing_power_df = pd.DataFrame(purchasing_power)
+    fig, ax1 = plt.subplots()
+    ax2 = ax1.twinx()
+    ax1.bar(purchasing_power_df['Age Range'], purchasing_power_df['Male'], color='blue', alpha=0.5)
+    ax2.plot(purchasing_power_df['Age Range'], purchasing_power_df['Female'], color='red')
+    ax1.set_xlabel('Age Range')
+    ax1.set_ylabel('Purchasing Power (Male)', color='blue')
+    ax2.set_ylabel('Purchasing Power (Female)', color='red')
+    plt.title('Age Range vs Purchasing Power')
+    plt.savefig('exports/charts/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+
+
+result = analyze_data(dfs)
+        ```
+2023-08-24 18:09:21 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/temp_chart.png'}
+2023-08-24 18:09:21 [INFO] Executed in: 142.26331305503845s
